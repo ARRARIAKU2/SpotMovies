@@ -1,1 +1,80 @@
 GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/64c21e5a9064be376db6dcc0
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "ahaha",
+    "email": "alana@gmail.com",
+    "gender": "Male"
+}
+
+###
+PATCH http://localhost:5000/users/64c21df09064be376db6dcbd
+Content-Type: application/json
+
+{
+    "name": "broooooooo",
+    "email": "sdfsdfsdf@gmail.com",
+    "gender": "Male"
+}
+
+###
+DELETE http://localhost:5000/users/64c21df09064be376db6dcbd
+Content-Type: application/json
+
+###
+GET http://localhost:5000/
+
+###
+POST http://localhost:5000/
+Content-Type: application/json
+
+{
+  "videoThumbnail": "https://i.ytimg.com/vi/5qap5aO4i9A/maxresdefault.jpg",
+  "videoTitle": "How to make a REST API with Node.js | Mongoose | Express | MongoDB",
+  "product": [
+    {
+      "productLink": "https://www.youtube.com/watch?v=5qap5aO4i9A",
+      "productTitle": "mongoose",
+      "productPrice": 1000
+    },
+    {
+      "productLink": "https://www.youtube.com/watch?v=5qap5aO4i9A",
+      "productTitle": "express",
+      "productPrice": 2000
+    },
+    {
+      "productLink": "https://www.youtube.com/watch?v=5qap5aO4i9A",
+      "productTitle": "mongodb",
+      "productPrice": 3000
+    }
+  ],
+  "comment": [
+    {
+      "commentUsername": "alana",
+      "commentContent": "good"
+    },
+    {
+      "commentUsername": "alana",
+      "commentContent": "good"
+    },
+    {
+      "commentUsername": "alana",
+      "commentContent": "good"
+    }
+  ]
+}
+
+###
+PATCh http://localhost:5000/videos/64c294e149210e219b3b7bf3
+Content-Type: application/json
+
+{
+        "commentUsername": "sdfsdfsdfsdf",
+        "commentContent": "sdfsdfsdff"
+}

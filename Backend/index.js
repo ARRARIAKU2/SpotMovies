@@ -2,11 +2,11 @@ import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import UserRoute from './routes/UserRoute.js';
+import VideoRoute from './routes/VideoRoute.js';
 
 dotenv.config();
 const mongooseString = process.env.DATABASE_URL;
-
-import UserRoute from './routes/UserRoute.js';
 
 const app = express();
 
@@ -26,6 +26,7 @@ db.once('connected', () => {
 app.use(cors());
 app.use(express.json());
 app.use(UserRoute);
+app.use(VideoRoute);
 
 app.listen(5000, () => {
     console.log('Server running on port 5000');

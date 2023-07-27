@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSearch, faBook, faPlusSquare, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
 import "./index.css";
 
-function Sidebar() {
+function Sidebar({icon, title}) {
     return (
         <>
             <div class="sidebar">
@@ -25,13 +25,13 @@ function Sidebar() {
                         <li>
                             <a href="#">
                                 <FontAwesomeIcon icon={faSearch} size="xl" className="mr-3"/>
-                                <span>Search</span>
+                                <span>SpotMusic</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <FontAwesomeIcon icon={faBook} size="xl" className="mr-3"/>
-                                <span>Your Library</span>
+                                <span>SpotMovie</span>
                             </a>
                         </li>
                         <li>
