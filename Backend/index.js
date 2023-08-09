@@ -5,8 +5,9 @@ import cors from 'cors';
 import UserRoute from './routes/UserRoute.js';
 import VideoRoute from './routes/VideoRoute.js';
 
-dotenv.config();
-const mongooseString = process.env.DATABASE_URL;
+// dotenv.config();
+
+// const mongooseString = process.env.DATABASE_URL;
 
 const app = express();
 
