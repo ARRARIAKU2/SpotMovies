@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
-import Sidebar from "../../Components/Sidebar";
-import Navbar from "../../Components/Navbar";
-import ListCard from "../../Components/ListCard";
+import Sidebar from "../../Components//Organism/Sidebar";
+import Navbar from "../../Components/Organism/Navbar";
+import ListCard from "../../Components/Molecule/ListCard";
+import ListVideo from "../../Components/Molecule/ListVideo";
 
 function Home() {
     const listCard = [
@@ -48,13 +49,13 @@ function Home() {
             <Sidebar />
             <div className="main-container">
                 <Navbar />
+                <ListVideo />
                 <ListCard ListCard={listCard} img="https://i.scdn.co/image/ab6761610000e5ebf173136b94ae2f75f49f8b2b" />
             </div>
             <div>
                 <h1>Home</h1>
                 <Link to="/users">Users</Link>
             </div>
-
         </>
     )
 }

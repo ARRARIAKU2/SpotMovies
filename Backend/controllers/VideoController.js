@@ -39,7 +39,7 @@ export const getProduct = async (req, res) => {
 
 export const getComment = async (req, res) => {
     try {
-        const comment = await Video.find({_id: req.params.id}, {comment: 1});
+        const comment = await Video.find({_id: req.params.id}, {comment: -1});
         res.status(200).json(comment);
     } catch (error) {
         res.status(404).json({ message: error.message });

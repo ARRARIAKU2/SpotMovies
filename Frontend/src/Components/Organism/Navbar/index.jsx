@@ -1,4 +1,6 @@
 import React from "react";
+
+import Button from "../../Atom/Button";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import "./index.css";
@@ -8,8 +10,8 @@ function Navbar() {
         <>
             <div class="topbar">
                 <div class="prev-next-buttons">
-                    <button type="button"><FontAwesomeIcon icon={faChevronLeft} /></button>
-                    <button type="button"><FontAwesomeIcon icon={faChevronRight} /></button>
+                    <Button className={"bg-[090909]"} content={<FontAwesomeIcon icon={faChevronLeft}/>} />
+                    <Button className={"bg-[090909]"} content={<FontAwesomeIcon icon={faChevronRight} />} />
                 </div>
                 <div class="navbar">
                     <ul>
@@ -27,10 +29,10 @@ function Navbar() {
                             <a href="#">Sign Up</a>
                         </li>
                     </ul>
-                    <button type="button">Log In</button>
+                    <Button className={"bg-[ffffff]"} content={"Login"} />
                 </div>
             </div>
-        </>
+        </> 
     )
 };
 

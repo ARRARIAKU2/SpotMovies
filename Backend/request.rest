@@ -28,15 +28,16 @@ DELETE http://localhost:5000/users/64c21df09064be376db6dcbd
 Content-Type: application/json
 
 ###
-GET http://localhost:5000/
+GET http://localhost:5000/videos/64c294e149210e219b3b7bf3/comment
 
 ###
-POST http://localhost:5000/
+POST http://localhost:5000/videos
 Content-Type: application/json
 
 {
-  "videoThumbnail": "https://i.ytimg.com/vi/5qap5aO4i9A/maxresdefault.jpg",
-  "videoTitle": "How to make a REST API with Node.js | Mongoose | Express | MongoDB",
+  "videoID": "itnqEauWQZM",
+  "videoThumbnail": "https://www.gamespot.com/a/uploads/original/1601/16018044/4134965-beast-1.jpg",
+  "videoTitle": "Transformers: Rise of The Beasts",
   "product": [
     {
       "productLink": "https://www.youtube.com/watch?v=5qap5aO4i9A",
@@ -71,10 +72,10 @@ Content-Type: application/json
 }
 
 ###
-PATCh http://localhost:5000/videos/64c294e149210e219b3b7bf3
+PATCh http://localhost:5000/videos/64c294e149210e219b3b7bf3/comment
 Content-Type: application/json
 
 {
-        "commentUsername": "sdfsdfsdfsdf",
-        "commentContent": "sdfsdfsdff"
+        "commentUsername": "Aldo",
+        "commentContent": "Anjayyy"
 }

@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const Video = mongoose.Schema({
+    videoID: {
+        type: String,
+        required: true
+    },
     videoThumbnail: {
         type: String,
         required: true

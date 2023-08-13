@@ -7,7 +7,7 @@ function ListCard({ ListCard, img }) {
     return (
         <>
             <div class="spotify-playlists">
-                <h2>Popular</h2>
+                <h2>Popular Music</h2>
 
                 <div className="list">
                     {ListCard.map((item, index) => (
