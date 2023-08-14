@@ -1,23 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Table } from 'flowbite-react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Users() {
-    const [users, setUsers] = useState([
-        {
-            id: 1,
-            name: "Rizky",
-            email: "rizky@gmail.com",
-            age: 20
-        },
-        {
-            id: 2,
-            name: "Rizky",
-            email: "rikyzyf@gmail.com",
-            age: 20
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        getUsers();
+    }, []);
+
+    const getUsers = async () => {
+        const response = await axios.get("http://localhost:5000/users");
+        setUsers(response.data);
+    };
+
+    const deleteUser = async (id) => {
+        try {
+            await axios.delete(`http://localhost:5000/users/${id}`);
+            getUsers();
+        } catch (error) {
+            console.log(error);
         }
-    ])
+    }
+
     return (
         <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
             <div className="w-50 bg-white p-3 rounded">
@@ -31,7 +38,7 @@ function Users() {
                             Email       
                         </Table.HeadCell>
                         <Table.HeadCell>
-                            Age
+                            Gender
                         </Table.HeadCell>
                         <Table.HeadCell>
                             Action
@@ -40,7 +47,7 @@ function Users() {
                     <Table.Body className="divide-y">
                         {
                             users.map((user) => (
-                                <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800" key={user.id}>
+                                <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800" key={user._id}>
                                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                                         {user.name}
                                     </Table.Cell>
@@ -48,13 +55,13 @@ function Users() {
                                         {user.email}
                                     </Table.Cell>
                                     <Table.Cell>
-                                        {user.age}
+                                        {user.gender}
                                     </Table.Cell>
                                     <Table.Cell>
                                         <div className="columns-2">
                                             <Link
                                                 className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-                                                to="/edituser"
+                                                to={`/edituser/${user._id}`}
                                             >
                                                 <p>
                                                     Edit
@@ -62,6 +69,7 @@ function Users() {
                                             </Link>
                                             <button
                                                 className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                                                onClick={() => deleteUser(user._id)}
                                             >
                                                 <p>
                                                     Delete
