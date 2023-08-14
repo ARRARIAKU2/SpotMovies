@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSearch, faBook, faPlusSquare, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
 import "./index.css";
 
-function Sidebar({icon, title}) {
+function Sidebar() {
     return (
         <>
             <div className="sidebar">

@@ -1,7 +1,5 @@
 import React from "react";
 import "./index.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 function ListCard({ ListCard, img }) {
     return (

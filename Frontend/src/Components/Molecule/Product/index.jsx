@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Product({ ListData, id }) {
+function Product({ ListData}) {
     return (
         <>
             <div className="w-[250px] h-[700px] overflow-auto">

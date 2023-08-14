@@ -1,7 +1,5 @@
 import moment from "moment-timezone";
-import { Button, TextInput } from 'flowbite-react'; // Assuming 'Label' is not used in this component
-import React, { useState, useEffect } from "react";
-
+import React from "react";
 
 function Comment({ data }) {
     return (

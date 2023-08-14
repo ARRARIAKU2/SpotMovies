@@ -43,15 +43,13 @@ function Video() {
     };
 
     const updateComment = async (e) => {
-        e.preventDefault(); // Prevent the form from submitting and refreshing the page
+        e.preventDefault();
         try {
             await axios.patch(`http://localhost:5000/videos/${id}`, {
                 commentUsername,
                 commentContent,
             });
-            // Refresh comments after submitting
             getCommentById(id);
-            // Clear the input fields
             setCommentUsername("");
             setCommentContent("");
         } catch (error) {
