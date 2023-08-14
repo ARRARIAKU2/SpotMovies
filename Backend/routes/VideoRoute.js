@@ -8,7 +8,7 @@ router.get('/videos/:id', getVideosById);
 router.post('/videos', saveVideos);
 router.get('/videos/:id/product', getProduct);
 router.get('/videos/:id/comment', getComment);
-router.patch('/videos/:id/comment', saveComment);
+router.patch('/videos/:id', saveComment);
 
 
 export default router;

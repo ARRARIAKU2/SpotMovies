@@ -36,6 +36,11 @@ const Video = mongoose.Schema({
             type: String,
             required: true
         },
+        commentDate: {
+            type: Date,
+            default: Date.now,
+            required: true
+        }
     }]
 });
 

@@ -79,7 +79,7 @@ function Users() {
                                     </Table.Cell>
                                 </Table.Row>
                             ))
-                        }
+                        };
                     </Table.Body>
                 </Table>
             </div>

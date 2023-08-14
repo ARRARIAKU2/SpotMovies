@@ -8,12 +8,12 @@ import "./index.css";
 function Navbar() {
     return(
         <>
-            <div class="topbar">
-                <div class="prev-next-buttons">
+            <div className="topbar">
+                <div className="prev-next-buttons">
                     <Button className={"bg-[090909]"} content={<FontAwesomeIcon icon={faChevronLeft}/>} />
                     <Button className={"bg-[090909]"} content={<FontAwesomeIcon icon={faChevronRight} />} />
                 </div>
-                <div class="navbar">
+                <div className="navbar">
                     <ul>
                         <li>
                             <a href="#">Premium</a>
@@ -24,7 +24,7 @@ function Navbar() {
                         <li>
                             <a href="#">Download</a>
                         </li>
-                        <li class="divider">|</li>
+                        <li className="divider">|</li>
                         <li>
                             <a href="#">Sign Up</a>
                         </li>

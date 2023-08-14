@@ -30,7 +30,7 @@ export const saveVideos = async (req, res) => {
 
 export const getProduct = async (req, res) => {
     try {
-        const product = await Video.find({_id: req.params.id}, {product: 1});
+        const product = await Video.findOne({_id: req.params.id}, {product: 1});
         res.status(200).json(product);
     } catch (error) {
         res.status(404).json({ message: error.message });
@@ -39,7 +39,7 @@ export const getProduct = async (req, res) => {
 
 export const getComment = async (req, res) => {
     try {
-        const comment = await Video.find({_id: req.params.id}, {comment: -1});
+        const comment = await Video.findOne({_id: req.params.id}, {comment: -1});
         res.status(200).json(comment);
     } catch (error) {
         res.status(404).json({ message: error.message });
@@ -49,13 +49,7 @@ export const getComment = async (req, res) => {
 export const saveComment = async (req, res) => {
     try {
         const insertedcomment = await Video.updateOne({_id: req.params.id},{"$push": {"comment": req.body}});
-        res.status(201).json({
-            message: "Comment added successfully",
-            data : {
-                commentUsername : insertedcomment.commentUsername,
-                commentContent  : insertedcomment.commentContent,
-            }
-        });
+        res.status(201).json(insertedcomment);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }

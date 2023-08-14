@@ -28,16 +28,16 @@ DELETE http://localhost:5000/users/64c21df09064be376db6dcbd
 Content-Type: application/json
 
 ###
-GET http://localhost:5000/videos/64c294e149210e219b3b7bf3/comment
+GET http://localhost:5000/videos
 
 ###
 POST http://localhost:5000/videos
 Content-Type: application/json
 
 {
-  "videoID": "itnqEauWQZM",
-  "videoThumbnail": "https://www.gamespot.com/a/uploads/original/1601/16018044/4134965-beast-1.jpg",
-  "videoTitle": "Transformers: Rise of The Beasts",
+  "videoID": "u9Mv98Gr5pY",
+  "videoThumbnail": "https://image.tmdb.org/t/p/original/gU8S1vujZzCDYdxRTwsz4wCdWld.jpg",
+  "videoTitle": "Venom",
   "product": [
     {
       "productLink": "https://www.youtube.com/watch?v=5qap5aO4i9A",
@@ -57,25 +57,25 @@ Content-Type: application/json
   ],
   "comment": [
     {
-      "commentUsername": "alana",
-      "commentContent": "good"
+      "commentUsername": "Alana",
+      "commentContent": "goo2222d"
     },
     {
-      "commentUsername": "alana",
-      "commentContent": "good"
+      "commentUsername": "Aldo",
+      "commentContent": "goo3444d"
     },
     {
-      "commentUsername": "alana",
-      "commentContent": "good"
+      "commentUsername": "Dewa",
+      "commentContent": "go5555od"
     }
   ]
 }
 
 ###
-PATCh http://localhost:5000/videos/64c294e149210e219b3b7bf3/comment
+PATCH http://localhost:5000/videos/64da9bbb8e70a0da37eebe2b
 Content-Type: application/json
 
 {
         "commentUsername": "Aldo",
-        "commentContent": "Anjayyy"
+        "commentContent": "Anjadsdsdsdsdsyl;;l;gfgfgfgflyy"
 }

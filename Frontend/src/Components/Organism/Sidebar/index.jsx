@@ -7,14 +7,14 @@ import "./index.css";
 function Sidebar({icon, title}) {
     return (
         <>
-            <div class="sidebar">
-                <div class="logo">
+            <div className="sidebar">
+                <div className="logo">
                     <a href="#">
                         <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png"
                             alt="Logo" />
                     </a>
                 </div>
-                <div class="navigation">
+                <div className="navigation">
                     <ul>
                         <li>
                             <a href="#">
