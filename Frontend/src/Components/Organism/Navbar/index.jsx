@@ -25,7 +25,7 @@ function Navbar() {
                         <li>
                             <Link to={"/"}>DownloLinkd</Link>
                         </li>
-                        <li clLinkssNLinkme="divider">|</li>
+                        <li>|</li>
                         <li>
                             <Link to={"/"}>Sign Up</Link>
                         </li>

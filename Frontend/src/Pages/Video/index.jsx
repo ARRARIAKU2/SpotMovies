@@ -12,6 +12,8 @@ import Product from "../../Components/Molecule/Product";
 import Comment from "../../Components/Molecule/Comment";
 import Youtube from "../../Components/Atom/Youtube";
 
+
+
 function Video() {
     const [product, setProduct] = useState([]);
     const [comment, setComment] = useState([]);

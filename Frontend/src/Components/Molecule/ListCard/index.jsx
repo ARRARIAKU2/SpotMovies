@@ -4,7 +4,7 @@ import "./index.css";
 function ListCard({ ListCard, img }) {
     return (
         <>
-            <div class="spotify-playlists">
+            <div className="spotify-playlists">
                 <h2>Popular Music</h2>
 
                 <div className="list">

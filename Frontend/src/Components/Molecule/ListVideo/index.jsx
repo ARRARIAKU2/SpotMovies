@@ -22,7 +22,7 @@ function ListVideo() {
             <div className="container">
                 {
                     videos.map((video) => (
-                        <Link className="box" to={`/videos/${video._id}`}>
+                        <Link className="box" to={`/videos/${video._id}`} key={video._id}>
                             <div className="imgBx">
                                 <img
                                     id="gambar" src={video.videoThumbnail} alt="sdfsdfsd"/>
