@@ -11,10 +11,7 @@ const mongooseString = process.env.DATABASE_URL;
 
 const app = express();
 
-mongoose.connect(mongooseString, { 
-    useNewUrlParser: true, 
-    useUnifiedTopology: true 
-});
+mongoose.connect(mongooseString);
 
 const db = mongoose.connection;
 db.on('error', (error) => {
@@ -29,6 +26,7 @@ app.use(express.json());
 app.use(UserRoute);
 app.use(VideoRoute);
 
-app.listen(5000, () => {
-    console.log('Server running on port 5000');
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+    console.log('Server running on port ', port);
 });
