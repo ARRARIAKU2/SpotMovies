@@ -30,24 +30,24 @@ function Video() {
     }, [id]);
 
     const getProductById = async (id) => {
-        const response = await axios.get(`http://localhost:5000/videos/${id}/product`);
+        const response = await axios.get(`https://backend-finpro-production.up.railway.app/videos/${id}/product`);
         setProduct(response.data.product);
     };
 
     const getVideoById = async (id) => {
-        const response = await axios.get(`http://localhost:5000/videos/${id}`);
+        const response = await axios.get(`https://backend-finpro-production.up.railway.app/videos/${id}`);
         setVideo(response.data);
     };
 
     const getCommentById = async (id) => {
-        const response = await axios.get(`http://localhost:5000/videos/${id}/comment`);
+        const response = await axios.get(`https://backend-finpro-production.up.railway.app/videos/${id}/comment`);
         setComment(response.data.comment);
     };
 
     const updateComment = async (e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:5000/videos/${id}`, {
+            await axios.patch(`https://backend-finpro-production.up.railway.app/videos/${id}`, {
                 commentUsername,
                 commentContent,
             });

@@ -12,13 +12,13 @@ function Users() {
     }, []);
 
     const getUsers = async () => {
-        const response = await axios.get("http://localhost:5000/users");
+        const response = await axios.get("https://backend-finpro-production.up.railway.app/users");
         setUsers(response.data);
     };
 
     const deleteUser = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/users/${id}`);
+            await axios.delete(`https://backend-finpro-production.up.railway.app/users/${id}`);
             getUsers();
         } catch (error) {
             console.log(error);

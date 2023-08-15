@@ -11,7 +11,7 @@ function ListVideo() {
     }, []);
 
     const getVideos = async () => {
-        const response = await axios.get("http://localhost:5000/videos");
+        const response = await axios.get("https://backend-finpro-production.up.railway.app/videos");
         console.log(response.data);
         setVideos(response.data);
     };
