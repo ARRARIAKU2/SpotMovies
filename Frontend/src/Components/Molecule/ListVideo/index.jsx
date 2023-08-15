@@ -25,7 +25,7 @@ function ListVideo() {
                         <Link className="box" to={`/videos/${video._id}`}>
                             <div className="imgBx">
                                 <img
-                                    id="gambar" src={video.videoThumbnail} />
+                                    id="gambar" src={video.videoThumbnail} alt="sdfsdfsd"/>
                             </div>
                             <div className="content">
                                 <div>

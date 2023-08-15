@@ -3,6 +3,7 @@ import React from "react";
 import Button from "../../Atom/Button";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import {Link} from "react-router-dom";
 import "./index.css";
 
 function Navbar() {
@@ -16,17 +17,17 @@ function Navbar() {
                 <div className="navbar">
                     <ul>
                         <li>
-                            <a href="#">Premium</a>
+                            <Link to={"/"}>Premium</Link>
                         </li>
                         <li>
-                            <a href="#">Support</a>
+                            <Link to={"/"}>Support</Link>
                         </li>
                         <li>
-                            <a href="#">Download</a>
+                            <Link to={"/"}>DownloLinkd</Link>
                         </li>
-                        <li className="divider">|</li>
+                        <li clLinkssNLinkme="divider">|</li>
                         <li>
-                            <a href="#">Sign Up</a>
+                            <Link to={"/"}>Sign Up</Link>
                         </li>
                     </ul>
                     <Button className={"bg-[ffffff]"} content={"Login"} />

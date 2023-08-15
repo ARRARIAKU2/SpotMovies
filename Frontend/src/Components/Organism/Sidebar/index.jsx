@@ -9,42 +9,42 @@ function Sidebar() {
         <>
             <div className="sidebar">
                 <div className="logo">
-                    <a href="#">
+                    <Link to={"/"}>
                         <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png"
                             alt="Logo" />
-                    </a>
+                    </Link>
                 </div>
                 <div className="navigation">
                     <ul>
                         <li>
-                            <a href="#">
+                            <Link to={"/"}>
                                 <FontAwesomeIcon icon={faHome} size="xl" className="mr-3"/>
                                 <span>Home</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#">
+                            <Link to={"/"}>
                                 <FontAwesomeIcon icon={faSearch} size="xl" className="mr-3"/>
                                 <span>SpotMusic</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#">
+                            <Link to={"/"}>
                                 <FontAwesomeIcon icon={faBook} size="xl" className="mr-3"/>
                                 <span>SpotMovie</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#">
+                            <Link to={"/"}>
                                 <FontAwesomeIcon icon={faPlusSquare} size="xl" className="mr-3"/>
                                 <span>Create Playlist</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#">
+                            <Link to={"/"}>
                                 <FontAwesomeIcon icon={faHeart} size="xl" className="mr-3"/>
                                 <span>Liked Songs</span>
-                            </a>
+                            </Li>
                         </li>
                         <li>
                             <Link to="users">
