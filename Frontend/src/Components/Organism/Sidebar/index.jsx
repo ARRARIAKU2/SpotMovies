@@ -44,7 +44,7 @@ function Sidebar() {
                             <Link to={"/"}>
                                 <FontAwesomeIcon icon={faHeart} size="xl" className="mr-3"/>
                                 <span>Liked Songs</span>
-                            </Li>
+                            </Link>
                         </li>
                         <li>
                             <Link to="users">
